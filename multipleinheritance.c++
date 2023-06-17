@@ -16,31 +16,21 @@ class Polygon
         return perimeter;
     }
 };
-class Triangle: public Polygon
+class Triangle 
 {
     public:
     int base,height;
     float area()
     {
-        return 0.5*base*height; 
+        return 0.5*base*height;
     }
     int perimeter()
+
     {
         return (2*base+height);
     }
-    void display()
-    {
-        cout<<"The Area of the Triangle is:"<<area()<<endl;
-        cout<<"The Perimeter of the Triangle is:"<<perimeter()<<endl;
-    }
-    Triangle(int b,int h)
-    {
-        base=b;
-        height=h;
-    }
-    
 };
-class Etriangle: public Triangle
+class Etriangle : public Triangle,public Polygon
 {
     public:
     int side;
@@ -54,17 +44,17 @@ class Etriangle: public Triangle
     }
     void display()
     {
-        cout<<"The Area of the triangle is:"<<area()<<endl;
+        cout<<"The Area of the Triangle is:"<<area()<<endl;
         cout<<"The Perimeter of the Triangle is:"<<perimeter()<<endl;
     }
-    Etriangle(int s,int b,int h):Triangle(b,h)
+    Etriangle(int s)
     {
         side=s;
     }
 };
 int main()
 {
-    Etriangle e =Etriangle(10,10,10);
+    Etriangle e = Etriangle(10);
     e.display();
     return 0;
 }

@@ -1,3 +1,21 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+class Polygon
+{
+    public:
+    int dimension;
+    int area()
+    {
+        int area;
+        return area;
+    }
+    int perimeter()
+    {
+        int perimeter;
+        return perimeter;
+    }
+};
 class Triangle: public Polygon
 {
     public:
@@ -44,3 +62,9 @@ class Etriangle: public Triangle
         side=s;
     }
 };
+int main()
+{
+    Etriangle e =Etriangle(10,10,10);
+    e.display();
+    return 0;
+}
